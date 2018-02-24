@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="dynamic.js"></script>
+  <title>Assignment 2</title>
+
+
+</head>
+<body>
+
+  <h1>Please Fill in the following: </h1>
+
+  <!-- Start of the form  -->
+  <form method="POST" id="form1" action='./'>
+
+    <div class="container" id="wrapper"
+
+
+    <!-- Name Section -->
+    <div class="fullName">
+      <label for="fname">First name:</label>
+      <input type="text" name="Firstname" autofocus placeholder="eg. Bobby" pattern="[A-Za-z]+" title="Enter alphabets only" required><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" name="Lastname" placeholder="eg. Chan" pattern="[A-Za-z]+" title="Enter alphabets only"><br><br>
+    </div>
+
+    <!-- Gender Section -->
+    <div class="gender" id="gender">
+      <label for="sex">Gender:</label>
+      <select  name="Gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br><br>
+    </div>
+
+    <!-- Birthday section -->
+    <label for="bday">Birthdate:</label>
+    <input type="date" name="Birthday"><br><br>
+
+    <!-- Email Section Start -->
+    <div class="emailSection" id = "dynamicEntry">
+      <label for="email">E-mail :</label>
+      <input type="email" name="Email_0" placeholder="eg. bobbyc@sfu.ca" >
+      <!-- Add Button -->
+      <input type="button" value="+" onclick="addEmail('dynamicEntry')">
+    </div>
+
+    <!-- Remove Button -->
+    <!-- <input type="button" value="-" onclick="removeEmail()"> -->
+    <!-- Reset Button -->
+    <input type="reset" value="Reset"><br>
+
+  </div>
+
+  <!-- Final Buttons -->
+  <div class="buttons">
+    <input class="button-left" type="submit" id="submit" value="Submit">
+    <input class="button-right" type="button" id="addMore" onclick="duplicate()" value="Add More">
+  </div>
+
+</form>
+
+
+
+</body>
+</html>
