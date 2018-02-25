@@ -49,6 +49,7 @@ server.on('request', function(req,res){
     fs.readFile( './data/users.json', function(err, content ){
       if(err){
         if(err.code == 'ENOENT'){
+          fs.mkdirSync('data');
           console.log("in here");
           res.writeHead(200, {"Content-Type": "application/json"});
           var formData = {
